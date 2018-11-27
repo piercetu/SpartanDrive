@@ -23,6 +23,8 @@
 		DAE308FF2190345E008157C5 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE308FE2190345E008157C5 /* google.png */; };
 		DAE3090121903506008157C5 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE3090021903505008157C5 /* facebook.png */; };
 		DAEC528B21A94BFD00E285B8 /* spartan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAEC528A21A94BFD00E285B8 /* spartan.jpg */; };
+		F51864D621AD168700C44D42 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = F51864D521AD168700C44D42 /* user.png */; };
+		F51864D821AD247600C44D42 /* bars.png in Resources */ = {isa = PBXBuildFile; fileRef = F51864D721AD247600C44D42 /* bars.png */; };
 		FA207420A0F50C1AF2511C53 /* Pods_SpartanDrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE15C4DEBB693D29C789A57 /* Pods_SpartanDrive.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		DAE308FE2190345E008157C5 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
 		DAE3090021903505008157C5 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		DAEC528A21A94BFD00E285B8 /* spartan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spartan.jpg; sourceTree = "<group>"; };
+		F51864D521AD168700C44D42 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		F51864D721AD247600C44D42 /* bars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bars.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +80,13 @@
 		DA2E3C3A21A5F35300F991D7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F51864D521AD168700C44D42 /* user.png */,
 				DA2E3C3D21A5F41E00F991D7 /* sample.pdf */,
 				DA2E3C3B21A5F3B000F991D7 /* sample.mov */,
 				DAE308FE2190345E008157C5 /* google.png */,
 				DAE3090021903505008157C5 /* facebook.png */,
 				DAEC528A21A94BFD00E285B8 /* spartan.jpg */,
+				F51864D721AD247600C44D42 /* bars.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -242,9 +248,11 @@
 				DAA3564D218FC39900411B7E /* GoogleService-Info.plist in Resources */,
 				DA2E3C3E21A5F41E00F991D7 /* sample.pdf in Resources */,
 				DA9E38E0218FBD78008AF9F8 /* Assets.xcassets in Resources */,
+				F51864D621AD168700C44D42 /* user.png in Resources */,
 				DAE308FF2190345E008157C5 /* google.png in Resources */,
 				DAEC528B21A94BFD00E285B8 /* spartan.jpg in Resources */,
 				DA9E38DE218FBD77008AF9F8 /* Main.storyboard in Resources */,
+				F51864D821AD247600C44D42 /* bars.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,9 +18,14 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
     
     @IBOutlet weak var selectedImage: UIImageView!
     @IBOutlet weak var uploadProgressLabel: UILabel!
+    @IBOutlet weak var container: UIView!
     
+    @IBOutlet weak var menu: UIView!
     //let your_firebase_storage_bucket = FirebaseOptions.defaultOptions()?.storageBucket ?? ""
+    @IBOutlet weak var menuBar: UIView!
     
+    @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet var buttons: [UIButton]!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,6 +84,10 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     // Upload Button
+    @IBAction func menuButtonAction(_ sender: Any) {
+    }
+    @IBAction func listButtonAction(_ sender: Any) {
+    }
     @IBAction func uploadTapped(_ sender: UIButton) {
         guard let image = selectedImage.image else { return  }
         guard let imageData = image.jpegData(compressionQuality: 1) else { return }
