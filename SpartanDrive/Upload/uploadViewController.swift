@@ -129,10 +129,19 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     
+    @IBOutlet weak var downloadURLLabel: UILabel!
     // Download Link Button
-//    @IBAction func downloadButton(_ sender: Any) {
-//        self.performSegue(withIdentifier: downloadSegue, sender: self)
-//    }
+    @IBAction func downloadButton(_ sender: Any) {
+        imageReference.child(filenameJPG).downloadURL {url, error in
+            if error != nil {
+                self.view.makeToast("There was a problem downloading your file. Try again.")
+            }
+            else {
+                self.view.makeToast("File successfully downloaded.")
+                self.downloadURLLabel.text = "\(String(describing: url))"
+            }
+        }
+    }
     
     // CollectionView of Files uploaded.
     @IBAction func userProfile(_ sender: UIButton) {
