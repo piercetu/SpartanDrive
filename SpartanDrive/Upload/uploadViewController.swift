@@ -21,13 +21,14 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var uploadProgressLabel: UILabel!
    //menu outlets
     
-
+    @IBOutlet weak var menuBtn: UIButton!
+    
     //let your_firebase_storage_bucket = FirebaseOptions.defaultOptions()?.storageBucket ?? ""
     override func viewDidLoad() {
         super.viewDidLoad()
         //displaying menu
-        
-        addButton.layer.cornerRadius = 35
+        menuBtn.layer.cornerRadius = 10
+        addButton.layer.cornerRadius = 30
         // Indicator for Login Method.
         if (GIDSignIn.sharedInstance().hasAuthInKeychain()) {
             // Google
@@ -133,6 +134,15 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
    
     @IBOutlet weak var addButton: UIButton!
     
+    @IBAction func handleAdd(_ sender: UIButton) {
+        addButtons.forEach { (theButton) in
+            UIView.animate(withDuration: 0.3 , animations: {
+                theButton.isHidden = !theButton.isHidden
+            })
+        }
+    }
+    
+    @IBOutlet var addButtons: [UIButton]!
     
     @IBAction func menuTapped(_ sender: UIButton) {
     }

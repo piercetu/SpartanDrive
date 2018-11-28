@@ -25,6 +25,7 @@
 		DAEC528B21A94BFD00E285B8 /* spartan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAEC528A21A94BFD00E285B8 /* spartan.jpg */; };
 		F51864D621AD168700C44D42 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = F51864D521AD168700C44D42 /* user.png */; };
 		F51864D821AD247600C44D42 /* bars.png in Resources */ = {isa = PBXBuildFile; fileRef = F51864D721AD247600C44D42 /* bars.png */; };
+		F51864DA21AE53FD00C44D42 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F51864D921AE53FD00C44D42 /* menu-icon.png */; };
 		FA207420A0F50C1AF2511C53 /* Pods_SpartanDrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE15C4DEBB693D29C789A57 /* Pods_SpartanDrive.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		DAEC528A21A94BFD00E285B8 /* spartan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spartan.jpg; sourceTree = "<group>"; };
 		F51864D521AD168700C44D42 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		F51864D721AD247600C44D42 /* bars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bars.png; sourceTree = "<group>"; };
+		F51864D921AE53FD00C44D42 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		DA2E3C3A21A5F35300F991D7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F51864D921AE53FD00C44D42 /* menu-icon.png */,
 				F51864D521AD168700C44D42 /* user.png */,
 				DA2E3C3D21A5F41E00F991D7 /* sample.pdf */,
 				DA2E3C3B21A5F3B000F991D7 /* sample.mov */,
@@ -249,6 +252,7 @@
 				DA2E3C3E21A5F41E00F991D7 /* sample.pdf in Resources */,
 				DA9E38E0218FBD78008AF9F8 /* Assets.xcassets in Resources */,
 				F51864D621AD168700C44D42 /* user.png in Resources */,
+				F51864DA21AE53FD00C44D42 /* menu-icon.png in Resources */,
 				DAE308FF2190345E008157C5 /* google.png in Resources */,
 				DAEC528B21A94BFD00E285B8 /* spartan.jpg in Resources */,
 				DA9E38DE218FBD77008AF9F8 /* Main.storyboard in Resources */,
