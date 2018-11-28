@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import Firebase
 
 class userInformationViewController: UIViewController {
 
+    @IBOutlet weak var displayNameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        displayNameLabel.text = "\("Name:  " + String(describing: Auth.auth().currentUser?.displayName ?? "Name:  NO DISPLAY NAME"))"
+        emailLabel.text = "\("Email:  " + String(describing: Auth.auth().currentUser?.email ?? "Email:  NO EMAIL"))"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

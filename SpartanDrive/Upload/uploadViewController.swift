@@ -117,6 +117,23 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
         uploadTask.resume()
     }
     
+    // Delete Button
+    @IBAction func deleteButton(_ sender: Any) {
+        imageReference.child(filenameJPG).delete { error in
+            if error != nil {
+                self.view.makeToast("There was a problem deleting your file. Try again.")
+            }
+            else {
+                self.view.makeToast("File successfully deleted.")
+            }
+        }
+    }
+    
+    // Download Link Button
+    @IBAction func downloadButton(_ sender: Any) {
+        self.performSegue(withIdentifier: downloadSegue, sender: self)
+    }
+    
     // CollectionView of Files uploaded.
     @IBAction func userProfile(_ sender: UIButton) {
         performSegue(withIdentifier: "userSegue", sender: nil)
