@@ -55,6 +55,9 @@ class collectionViewController: UICollectionViewController {
         return cell
     }
 
+    @IBAction func backToUploadButton(_ sender: Any) {
+         self.dismiss(animated: true, completion: nil)
+    }
     // MARK: UICollectionViewDelegate
 
     /*
