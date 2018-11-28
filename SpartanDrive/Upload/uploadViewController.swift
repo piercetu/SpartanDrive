@@ -15,20 +15,19 @@ import FirebaseDatabase
 import FBSDKLoginKit
 
 class uploadViewController: UIViewController, UINavigationControllerDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, GIDSignInUIDelegate {
-    
+    //menu variables
+  
     @IBOutlet weak var selectedImage: UIImageView!
     @IBOutlet weak var uploadProgressLabel: UILabel!
-    @IBOutlet weak var container: UIView!
+   //menu outlets
     
-    @IBOutlet weak var menu: UIView!
+
     //let your_firebase_storage_bucket = FirebaseOptions.defaultOptions()?.storageBucket ?? ""
-    @IBOutlet weak var menuBar: UIView!
-    
-    @IBOutlet weak var menuButton: UIButton!
-    @IBOutlet var buttons: [UIButton]!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //displaying menu
         
+        addButton.layer.cornerRadius = 35
         // Indicator for Login Method.
         if (GIDSignIn.sharedInstance().hasAuthInKeychain()) {
             // Google
@@ -45,8 +44,16 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Set the current view controller to the one embedded (in the storyboard).
+       
+        
+        // Draw the shapes for the open and close menu triangle.
+       
+        
     }
-   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -84,10 +91,7 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     // Upload Button
-    @IBAction func menuButtonAction(_ sender: Any) {
-    }
-    @IBAction func listButtonAction(_ sender: Any) {
-    }
+   
     @IBAction func uploadTapped(_ sender: UIButton) {
         guard let image = selectedImage.image else { return  }
         guard let imageData = image.jpegData(compressionQuality: 1) else { return }
@@ -116,7 +120,22 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBAction func viewFilesButton(_ sender: Any) {
         performSegue(withIdentifier: "viewFilesSegue", sender: nil)
     }
+     @IBOutlet var menuButtons: [UIButton]!
+    @IBAction func handleSelection(_ sender: UIButton) {
+        menuButtons.forEach{(button) in
+            UIView.animate(withDuration: 0.3 , animations: {
+                button.isHidden = !button.isHidden
+            })
+            
+        }
+    }
     
+   
+    @IBOutlet weak var addButton: UIButton!
+    
+    
+    @IBAction func menuTapped(_ sender: UIButton) {
+    }
     // Universal Sign Out Button. Go back to Login page.
     @IBAction func universalSignOut(_ sender: UIButton) {
         // Google Sign Out.
@@ -140,4 +159,5 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
             self.dismiss(animated: true)
         }
     }
+    
 }

@@ -194,20 +194,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ati-hj-utG">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="FVN-AR-q7w" kind="embed" id="vkF-AZ-Ho9"/>
-                                </connections>
-                            </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="File Upload" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8T-2d-8KL">
-                                <rect key="frame" x="120" y="110" width="174" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaF-QE-IDz">
                                 <rect key="frame" x="36" y="182" width="343" height="290"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -221,36 +207,75 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please upload a file" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqb-C2-gwb">
-                                <rect key="frame" x="95" y="697" width="225" height="30"/>
+                                <rect key="frame" x="95" y="600" width="225" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDA-xp-sOY">
-                                <rect key="frame" x="61" y="759" width="293" height="30"/>
+                                <rect key="frame" x="277" y="74" width="102" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="View Files"/>
                                 <connections>
                                     <action selector="viewFilesButton:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="zow-nI-iJi"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hh1-Ql-2xP" userLabel="Menu">
-                                <rect key="frame" x="20" y="44" width="374" height="172"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m54-dq-0vv">
+                                <rect key="frame" x="192" y="559" width="116" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.6588235294" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Upload File">
+                                    <color key="titleColor" red="0.0" green="0.33333333329999998" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadTapped:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="D10-4O-txz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="File Upload" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8T-2d-8KL">
+                                <rect key="frame" x="147" y="126" width="121.5" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GmB-PW-efI">
+                                <rect key="frame" x="30" y="64" width="100" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4I-uz-bzd">
-                                        <rect key="frame" x="257" y="60" width="116" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1T-Dd-Nc3">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.33333333329999998" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6Bz-gl-j7l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Menu">
+                                            <color key="titleColor" red="0.8980392157" green="0.6588235294" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleSelection:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="L1h-BI-wVs"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuI-cX-S3q">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                                         <color key="backgroundColor" red="0.8980392157" green="0.6588235294" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="Profile">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="BFT-vJ-wFp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="profile">
                                             <color key="titleColor" red="0.0" green="0.33333333329999998" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="menuTapped:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="EMw-ze-Ptl"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-cS-Mp4">
-                                        <rect key="frame" x="258" y="111" width="116" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-cS-Mp4">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                                         <color key="backgroundColor" red="0.8980392157" green="0.6588235294" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="zuG-ZE-zs6"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Sign Out">
@@ -266,63 +291,41 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToButton" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="sender:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="BgS-nM-OAd"/>
-                                            <action selector="universalSignOut:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="cdO-Nb-aKl"/>
+                                            <action selector="menuTapped:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="ceE-9z-YZc"/>
+                                            <action selector="universalSignOut:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="zDz-tf-2N9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m54-dq-0vv">
-                                        <rect key="frame" x="258" y="8" width="116" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.8980392157" green="0.6588235294" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="Upload File">
-                                            <color key="titleColor" red="0.0" green="0.33333333329999998" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="uploadTapped:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="D10-4O-txz"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tvk-Gw-IM6" userLabel="Menu Bar">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUw-ZR-2GG">
-                                                <rect key="frame" x="310" y="12" width="56" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="69" id="AVN-FE-2eA"/>
-                                                    <constraint firstAttribute="height" constant="51" id="q0l-4G-ayE"/>
-                                                </constraints>
-                                                <state key="normal" image="bars.png"/>
-                                                <connections>
-                                                    <action selector="menuButtonAction:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="kta-ls-wJM"/>
-                                                    <action selector="sender:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="3S8-ws-glQ"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="lUw-ZR-2GG" secondAttribute="trailing" id="Ysu-Is-Evw"/>
-                                            <constraint firstAttribute="height" constant="70" id="qcS-O7-CvP"/>
-                                            <constraint firstAttribute="bottom" secondItem="lUw-ZR-2GG" secondAttribute="bottom" id="whL-Fu-pBO"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.049145817760000002" green="0.2156838328" blue="0.34421557190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="vF9-Wt-SQ0"/>
+                                    <constraint firstAttribute="width" constant="100" id="7r5-wT-qfl"/>
                                 </constraints>
-                            </view>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XF-2c-zS9">
+                                <rect key="frame" x="183" y="756" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.6588235294" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <color key="tintColor" red="0.0" green="0.33333333329999998" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.0" green="0.33333333329999998" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GmB-PW-efI" firstAttribute="top" secondItem="ldE-s6-jqv" secondAttribute="top" constant="20" id="b68-WZ-Noa"/>
+                            <constraint firstItem="f8T-2d-8KL" firstAttribute="leading" secondItem="GmB-PW-efI" secondAttribute="trailing" constant="200" id="pnM-Go-qL7"/>
+                            <constraint firstItem="f8T-2d-8KL" firstAttribute="leading" secondItem="GmB-PW-efI" secondAttribute="trailing" constant="8" id="srS-Y6-MJw"/>
+                            <constraint firstItem="GmB-PW-efI" firstAttribute="leading" secondItem="ldE-s6-jqv" secondAttribute="leading" constant="30" id="z6F-ps-vPd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ldE-s6-jqv"/>
                     </view>
                     <connections>
-                        <outlet property="container" destination="Ati-hj-utG" id="FlW-xV-N4p"/>
-                        <outlet property="menu" destination="hh1-Ql-2xP" id="ecM-cB-ozi"/>
-                        <outlet property="menuBar" destination="Tvk-Gw-IM6" id="n28-Ap-n2Z"/>
-                        <outlet property="menuButton" destination="lUw-ZR-2GG" id="yhu-r4-Qae"/>
+                        <outlet property="addButton" destination="6XF-2c-zS9" id="Ehq-wk-bC8"/>
                         <outlet property="selectedImage" destination="yaF-QE-IDz" id="OMr-NF-osM"/>
                         <outlet property="uploadProgressLabel" destination="lqb-C2-gwb" id="lGt-u6-H6u"/>
-                        <outletCollection property="buttons" destination="Imf-cS-Mp4" collectionClass="NSMutableArray" id="jDc-Ar-aZD"/>
+                        <outletCollection property="menuButtons" destination="Imf-cS-Mp4" collectionClass="NSMutableArray" id="fOF-0U-EdQ"/>
+                        <outletCollection property="menuButtons" destination="fuI-cX-S3q" collectionClass="NSMutableArray" id="cPC-4n-PyU"/>
                         <segue destination="dNo-JD-BeF" kind="show" identifier="viewFilesSegue" id="0CI-Yq-62P"/>
                     </connections>
                 </viewController>
@@ -645,7 +648,7 @@
             <objects>
                 <viewController id="FVN-AR-q7w" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OI7-zf-cZn">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="818"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -655,7 +658,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bars.png" width="318" height="159"/>
         <image name="facebook.png" width="18" height="18"/>
         <image name="google.png" width="18" height="18"/>
         <image name="spartan.jpg" width="908" height="908"/>

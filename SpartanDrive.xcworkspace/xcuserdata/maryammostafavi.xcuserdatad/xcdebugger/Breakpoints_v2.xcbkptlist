@@ -10,13 +10,90 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpartanDrive/Upload/uploadViewController.swift"
-            timestampString = "564996197.383617"
+            timestampString = "565059323.0595731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
             endingLineNumber = "17"
             landmarkName = "uploadViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpartanDrive.uploadViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SpartanDrive.uploadViewController"
+                  moduleName = "SpartanDrive"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maryammostafavi/Documents/SpartanDrive/SpartanDrive/Upload/uploadViewController.swift"
+                  timestampString = "565051827.182448"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpartanDrive.uploadViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SpartanDrive.uploadViewController"
+                  moduleName = "SpartanDrive"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maryammostafavi/Documents/SpartanDrive/SpartanDrive/Upload/uploadViewController.swift"
+                  timestampString = "565051827.18712"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpartanDrive.uploadViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SpartanDrive.uploadViewController&gt;"
+                  moduleName = "SpartanDrive"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maryammostafavi/Documents/SpartanDrive/SpartanDrive/Upload/uploadViewController.swift"
+                  timestampString = "565051827.1911221"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpartanDrive.uploadViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SpartanDrive.uploadViewController&gt;"
+                  moduleName = "SpartanDrive"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maryammostafavi/Documents/SpartanDrive/SpartanDrive/Upload/uploadViewController.swift"
+                  timestampString = "565051827.193962"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpartanDrive.uploadViewController.__deallocating_deinit"
+                  moduleName = "SpartanDrive"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maryammostafavi/Documents/SpartanDrive/SpartanDrive/Upload/uploadViewController.swift"
+                  timestampString = "565051827.196378"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
