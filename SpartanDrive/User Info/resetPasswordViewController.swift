@@ -12,6 +12,7 @@ import Foundation
 import Toast_Swift
 
 class resetPasswordViewController: UIViewController {
+    @IBOutlet weak var sendBtn: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBAction func sendEmailButton(_ sender: UIButton) {
         guard let email = emailTextField.text else { return }
@@ -33,7 +34,9 @@ class resetPasswordViewController: UIViewController {
             }
         }
     }
-    
+    override func viewDidLoad() {
+        sendBtn.layer.cornerRadius = 10
+    }
     // Go back to login page.
     @IBAction func backButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)

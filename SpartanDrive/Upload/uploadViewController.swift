@@ -130,9 +130,9 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     // Download Link Button
-    @IBAction func downloadButton(_ sender: Any) {
-        self.performSegue(withIdentifier: downloadSegue, sender: self)
-    }
+//    @IBAction func downloadButton(_ sender: Any) {
+//        self.performSegue(withIdentifier: downloadSegue, sender: self)
+//    }
     
     // CollectionView of Files uploaded.
     @IBAction func userProfile(_ sender: UIButton) {
