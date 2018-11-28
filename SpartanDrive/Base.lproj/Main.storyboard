@@ -192,7 +192,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spartan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8dR-zK-4cK">
-                                <rect key="frame" x="105" y="176" width="204" height="128"/>
+                                <rect key="frame" x="105" y="152" width="205" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -216,8 +216,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaF-QE-IDz">
-                                <rect key="frame" x="36" y="340" width="343" height="290"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaF-QE-IDz">
+                                <rect key="frame" x="36" y="266" width="343" height="290"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="hlc-U4-Dnh">
                                 <rect key="frame" x="0.0" y="797" width="414" height="44"/>
@@ -232,7 +233,7 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JpP-du-nU3">
-                                <rect key="frame" x="36" y="51" width="100" height="160"/>
+                                <rect key="frame" x="36" y="51" width="100" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1T-Dd-Nc3">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
@@ -249,8 +250,8 @@
                                             <action selector="handleSelection:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="L1h-BI-wVs"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuI-cX-S3q">
-                                        <rect key="frame" x="0.0" y="52" width="100" height="50"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuI-cX-S3q">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                                         <color key="backgroundColor" red="0.8980392157" green="0.6588235294" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="BFT-vJ-wFp"/>
@@ -267,8 +268,8 @@
                                             <action selector="userProfile:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="NVl-70-6JS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-cS-Mp4">
-                                        <rect key="frame" x="0.0" y="110" width="100" height="50"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-cS-Mp4">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                                         <color key="backgroundColor" red="0.8980392157" green="0.6588235294" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="1Wd-Fw-1LH"/>
@@ -291,7 +292,6 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToButton" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="menuTapped:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="ceE-9z-YZc"/>
                                             <action selector="universalSignOut:" destination="kU0-Pi-CrY" eventType="touchUpInside" id="zDz-tf-2N9"/>
                                         </connections>
                                     </button>
@@ -398,7 +398,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please upload a file!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqb-C2-gwb">
-                                <rect key="frame" x="36" y="239" width="342" height="65"/>
+                                <rect key="frame" x="37" y="175" width="342" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -415,7 +415,6 @@
                             <constraint firstItem="ldE-s6-jqv" firstAttribute="trailing" secondItem="Rsy-Tf-jT6" secondAttribute="trailing" constant="162" id="dP1-8E-3ha"/>
                             <constraint firstItem="Rsy-Tf-jT6" firstAttribute="leading" secondItem="ldE-s6-jqv" secondAttribute="leading" constant="158" id="gRb-yj-D1A"/>
                             <constraint firstItem="ldE-s6-jqv" firstAttribute="bottom" secondItem="Rsy-Tf-jT6" secondAttribute="bottom" constant="44" id="jN1-hL-RGd"/>
-                            <constraint firstItem="Rsy-Tf-jT6" firstAttribute="top" secondItem="yaF-QE-IDz" secondAttribute="bottom" constant="221" id="kvR-15-q8h"/>
                             <constraint firstItem="JpP-du-nU3" firstAttribute="leading" secondItem="ldE-s6-jqv" secondAttribute="leading" constant="36" id="mLY-ap-HiY"/>
                             <constraint firstItem="ldE-s6-jqv" firstAttribute="trailing" secondItem="Rsy-Tf-jT6" secondAttribute="trailing" constant="136" id="ofy-tV-Wql"/>
                             <constraint firstItem="ldE-s6-jqv" firstAttribute="bottom" secondItem="Rsy-Tf-jT6" secondAttribute="bottom" constant="21" id="vAW-LZ-SMS"/>
@@ -430,9 +429,9 @@
                         <outletCollection property="addButtons" destination="Qg4-01-r1w" collectionClass="NSMutableArray" id="Xrn-qe-FPB"/>
                         <outletCollection property="addButtons" destination="m54-dq-0vv" collectionClass="NSMutableArray" id="bIu-Pa-3G0"/>
                         <outletCollection property="menuButtons" destination="fuI-cX-S3q" collectionClass="NSMutableArray" id="cPC-4n-PyU"/>
-                        <outletCollection property="menuButtons" destination="Imf-cS-Mp4" collectionClass="NSMutableArray" id="fOF-0U-EdQ"/>
                         <outletCollection property="addButtons" destination="Y2o-fc-3P6" collectionClass="NSMutableArray" id="peP-gm-dNG"/>
                         <outletCollection property="addButtons" destination="dyx-Wd-Iwb" collectionClass="NSMutableArray" id="Ctk-Im-CBh"/>
+                        <outletCollection property="menuButtons" destination="Imf-cS-Mp4" collectionClass="NSMutableArray" id="wGQ-d8-kgZ"/>
                         <segue destination="Q9j-RI-Dye" kind="presentation" identifier="userSegue" id="TqP-s6-QwN"/>
                         <segue destination="mue-Fv-iez" kind="show" identifier="viewFilesSegue" id="3lx-jy-75V"/>
                         <segue destination="cmM-l2-HP9" kind="show" identifier="downloadSegue" id="5Co-Um-Ong"/>
@@ -687,14 +686,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uz-cB-0mZ">
-                                <rect key="frame" x="74" y="387" width="293" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPd-mb-WKf">
-                                <rect key="frame" x="74" y="463" width="293" height="39"/>
+                                <rect key="frame" x="23" y="386" width="371" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -709,6 +701,13 @@
                                     <action selector="backButton:" destination="Q9j-RI-Dye" eventType="touchUpInside" id="EwV-oZ-foS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPd-mb-WKf">
+                                <rect key="frame" x="23" y="462" width="371" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fZu-lO-d0m"/>
@@ -802,16 +801,8 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="35"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d49-wa-c6p">
-                                <rect key="frame" x="93" y="630" width="229" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Forgot Password?"/>
-                                <connections>
-                                    <action selector="forgotPasswordButton:" destination="UQF-ab-q8L" eventType="touchUpInside" id="4te-8h-kKD"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6u-h7-1Qa">
-                                <rect key="frame" x="96" y="567" width="218" height="30"/>
+                                <rect key="frame" x="110" y="564" width="184" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Don't have an account?"/>
                                 <connections>
@@ -833,6 +824,14 @@
                                     <action selector="firebaseSignIn:" destination="UQF-ab-q8L" eventType="touchUpInside" id="ooV-jw-3MK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d49-wa-c6p">
+                                <rect key="frame" x="88" y="594" width="229" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Forgot Password?"/>
+                                <connections>
+                                    <action selector="forgotPasswordButton:" destination="UQF-ab-q8L" eventType="touchUpInside" id="4te-8h-kKD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fIE-Mk-x3Y"/>
@@ -844,7 +843,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahq-aT-wuj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1391" y="202"/>
+            <point key="canvasLocation" x="-1391.304347826087" y="201.5625"/>
         </scene>
     </scenes>
     <resources>
@@ -855,7 +854,6 @@
         <image name="user.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TqP-s6-QwN"/>
-        <segue reference="Zrb-vg-kZa"/>
+        <segue reference="4wP-2a-nU0"/>
     </inferredMetricsTieBreakers>
 </document>
