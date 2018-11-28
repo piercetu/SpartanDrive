@@ -26,6 +26,7 @@
 		F51864D621AD168700C44D42 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = F51864D521AD168700C44D42 /* user.png */; };
 		F51864D821AD247600C44D42 /* bars.png in Resources */ = {isa = PBXBuildFile; fileRef = F51864D721AD247600C44D42 /* bars.png */; };
 		F51864DA21AE53FD00C44D42 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F51864D921AE53FD00C44D42 /* menu-icon.png */; };
+		F51864DC21AE7E4900C44D42 /* userInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51864DB21AE7E4900C44D42 /* userInformationViewController.swift */; };
 		FA207420A0F50C1AF2511C53 /* Pods_SpartanDrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE15C4DEBB693D29C789A57 /* Pods_SpartanDrive.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		F51864D521AD168700C44D42 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		F51864D721AD247600C44D42 /* bars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bars.png; sourceTree = "<group>"; };
 		F51864D921AE53FD00C44D42 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
+		F51864DB21AE7E4900C44D42 /* userInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				DA9E38DA218FBD77008AF9F8 /* loginViewController.swift */,
 				DA2E3C4321A8D55900F991D7 /* resetPasswordViewController.swift */,
 				DA2E3C4121A8112400F991D7 /* registerViewController.swift */,
+				F51864DB21AE7E4900C44D42 /* userInformationViewController.swift */,
 			);
 			path = "User Info";
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA35651218FC4EA00411B7E /* uploadViewController.swift in Sources */,
+				F51864DC21AE7E4900C44D42 /* userInformationViewController.swift in Sources */,
 				DA9E38DB218FBD77008AF9F8 /* loginViewController.swift in Sources */,
 				DA943D6C21ACD81400BF128C /* collectionViewController.swift in Sources */,
 				DA9E38D9218FBD77008AF9F8 /* AppDelegate.swift in Sources */,

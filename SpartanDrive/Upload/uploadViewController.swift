@@ -118,6 +118,9 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     // CollectionView of Files uploaded.
+    @IBAction func userProfile(_ sender: UIButton) {
+        performSegue(withIdentifier: "userSegue", sender: nil)
+    }
     @IBAction func viewFilesButton(_ sender: Any) {
         performSegue(withIdentifier: "viewFilesSegue", sender: nil)
     }
