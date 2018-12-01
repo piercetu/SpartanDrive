@@ -13,6 +13,7 @@ import GoogleSignIn
 import FirebaseStorage
 import FirebaseDatabase
 import FBSDKLoginKit
+import Toast_Swift
 
 class uploadViewController: UIViewController, UINavigationControllerDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, GIDSignInUIDelegate {
     //menu variables
@@ -92,15 +93,35 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     // Upload Button
-   
     @IBAction func uploadTapped(_ sender: UIButton) {
         guard let image = selectedImage.image else { return  }
         guard let imageData = image.jpegData(compressionQuality: 1) else { return }
-        let uploadImageRef = imageReference.child(filenameJPG)
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let uploadImageRef = imageReference.child(uid).child(filenameJPG)
         let uploadTask = uploadImageRef.putData(imageData, metadata: nil) { (metadata, error) in
-            print("UPLOAD COMPLETE")
-            print(metadata ?? "NO METADATA")
-            print(error ?? "NO ERROR")
+            if(error != nil) {
+                print(error?.localizedDescription ?? "NO ERROR")
+            }
+            else {
+                print("UPLOAD COMPLETE")
+                uploadImageRef.downloadURL(completion: { (url, error) in
+                    if(error != nil) {
+                        print("DOWNLOADURL GET ERROR");
+                        print(error!);
+                    }
+                    else{
+                        if let imageURL = url?.absoluteString{
+                            addUrlToDatabase(uid: uid, url:imageURL)
+                        }
+                }
+            })
+        }
+    }
+
+        // Get DownloadURL
+        func addUrlToDatabase(uid:String,url:String) {
+            let UserRef = Database.database().reference().child("User").child(uid);
+            UserRef.childByAutoId().setValue(url);
         }
         
         // UILabel for Upload in Progress.
@@ -116,6 +137,7 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
         
         uploadTask.resume()
     }
+
     
     // Delete Button
     @IBAction func deleteButton(_ sender: Any) {
@@ -147,10 +169,19 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBAction func userProfile(_ sender: UIButton) {
         performSegue(withIdentifier: "userSegue", sender: nil)
     }
+    
     @IBAction func viewFilesButton(_ sender: Any) {
         performSegue(withIdentifier: "viewFilesSegue", sender: nil)
+//        handleViewPhotos();
     }
-     @IBOutlet var menuButtons: [UIButton]!
+    
+//    func handleViewPhotos() {
+//        let viewPhotosController = photoTableViewController()
+//        let navController = UINavigationController(rootViewController: viewPhotosController)
+//        present(navController, animated: true, completion: nil)
+//    }
+//
+    @IBOutlet var menuButtons: [UIButton]!
     @IBAction func handleSelection(_ sender: UIButton) {
         menuButtons.forEach{(button) in
             UIView.animate(withDuration: 0.3 , animations: {

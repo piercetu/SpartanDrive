@@ -20,6 +20,7 @@
 		DA9E38E3218FBD78008AF9F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9E38E1218FBD78008AF9F8 /* LaunchScreen.storyboard */; };
 		DAA3564D218FC39900411B7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA3564C218FC39900411B7E /* GoogleService-Info.plist */; };
 		DAA35651218FC4EA00411B7E /* uploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA35650218FC4EA00411B7E /* uploadViewController.swift */; };
+		DAD3F07B21B29317004A9407 /* photoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3F07A21B29317004A9407 /* photoTableViewController.swift */; };
 		DAE308FF2190345E008157C5 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE308FE2190345E008157C5 /* google.png */; };
 		DAE3090121903506008157C5 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE3090021903505008157C5 /* facebook.png */; };
 		DAEC528B21A94BFD00E285B8 /* spartan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAEC528A21A94BFD00E285B8 /* spartan.jpg */; };
@@ -50,6 +51,7 @@
 		DA9E38E4218FBD78008AF9F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAA3564C218FC39900411B7E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DAA35650218FC4EA00411B7E /* uploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadViewController.swift; sourceTree = "<group>"; };
+		DAD3F07A21B29317004A9407 /* photoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoTableViewController.swift; sourceTree = "<group>"; };
 		DAE308FE2190345E008157C5 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
 		DAE3090021903505008157C5 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		DAEC528A21A94BFD00E285B8 /* spartan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spartan.jpg; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				DA943D6B21ACD81400BF128C /* collectionViewController.swift */,
+				DAD3F07A21B29317004A9407 /* photoTableViewController.swift */,
 			);
 			path = "View Files";
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			files = (
 				DAA35651218FC4EA00411B7E /* uploadViewController.swift in Sources */,
 				F51864DC21AE7E4900C44D42 /* userInformationViewController.swift in Sources */,
+				DAD3F07B21B29317004A9407 /* photoTableViewController.swift in Sources */,
 				DA9E38DB218FBD77008AF9F8 /* loginViewController.swift in Sources */,
 				DA943D6C21ACD81400BF128C /* collectionViewController.swift in Sources */,
 				DA9E38D9218FBD77008AF9F8 /* AppDelegate.swift in Sources */,

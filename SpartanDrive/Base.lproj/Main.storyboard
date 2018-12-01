@@ -313,10 +313,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="Rsy-Tf-jT6">
-                                <rect key="frame" x="132" y="797" width="150" height="60"/>
+                                <rect key="frame" x="132" y="797" width="120" height="60"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qg4-01-r1w">
-                                        <rect key="frame" x="25" y="0.0" width="100" height="50"/>
+                                        <rect key="frame" x="10" y="0.0" width="100" height="50"/>
                                         <color key="backgroundColor" red="0.8980392157" green="0.6588235294" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Afo-Og-f2A"/>
@@ -331,7 +331,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m54-dq-0vv">
-                                        <rect key="frame" x="25" y="0.0" width="100" height="50"/>
+                                        <rect key="frame" x="10" y="0.0" width="100" height="50"/>
                                         <color key="backgroundColor" red="0.8980392157" green="0.6588235294" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="7zU-Sz-w5s"/>
@@ -346,7 +346,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2o-fc-3P6">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                        <rect key="frame" x="-15" y="0.0" width="150" height="50"/>
                                         <color key="backgroundColor" red="0.8980392157" green="0.6588235294" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="0lE-Mf-Mt9"/>
@@ -361,7 +361,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyx-Wd-Iwb" userLabel="Download Link">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                        <rect key="frame" x="-15" y="0.0" width="150" height="50"/>
                                         <color key="backgroundColor" red="0.8980392157" green="0.6588235294" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="4VJ-3f-EvN"/>
@@ -376,7 +376,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XF-2c-zS9">
-                                        <rect key="frame" x="45" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="30" y="0.0" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.8980392157" green="0.6588235294" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="RSk-Bj-dsr"/>
@@ -859,7 +859,6 @@
         <image name="user.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f2i-K8-aWE"/>
         <segue reference="4wP-2a-nU0"/>
     </inferredMetricsTieBreakers>
 </document>
