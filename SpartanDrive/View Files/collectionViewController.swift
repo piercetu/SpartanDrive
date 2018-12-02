@@ -55,9 +55,15 @@ class collectionViewController: UICollectionViewController {
         return cell
     }
 
-    @IBAction func backToUploadButton(_ sender: Any) {
-         self.dismiss(animated: true, completion: nil)
+    @IBAction func backButton(_ sender: Any) {
+//        self.navigationController?.popToRootViewController(animated: true)
+        self.dismiss(animated: true)
     }
+    
+//    @IBAction func unwindToUploadButton(_ sender: UIStoryboardSegue) {
+//
+//    }
+    
     // MARK: UICollectionViewDelegate
 
     /*

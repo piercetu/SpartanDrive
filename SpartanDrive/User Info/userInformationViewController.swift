@@ -27,7 +27,8 @@ class userInformationViewController: UIViewController {
     
     
     @IBAction func backButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "backUploadSegue", sender: nil)
+//        performSegue(withIdentifier: "backUploadSegue", sender: nil)
+        self.dismiss(animated: true)
     }
     
     /*

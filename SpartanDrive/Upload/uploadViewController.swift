@@ -45,16 +45,16 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        // Set the current view controller to the one embedded (in the storyboard).
-       
-        
-        // Draw the shapes for the open and close menu triangle.
-       
-        
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        
+//        // Set the current view controller to the one embedded (in the storyboard).
+//       
+//        
+//        // Draw the shapes for the open and close menu triangle.
+//       
+//        
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -220,7 +220,8 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
         else if ((FBSDKAccessToken.current()) != nil) {
             FBSDKLoginManager().logOut()
             print("Facebook Sign Out Success!")
-            self.dismiss(animated: true)
+            performSegue(withIdentifier: "universalSignOutSegue", sender: nil)
+//            self.dismiss(animated: true)
         }
         
         // Firebase Sign Out.
