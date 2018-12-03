@@ -49,25 +49,28 @@ class photoTableViewController: UITableViewController {
         //let cell = tableView.dequeueReusableCell(withIdentifier: cellid, for: indexPath)
         cell.textLabel?.text = urllist[indexPath.row]
         let imageURL = urllist[indexPath.row]
-        let url = URL(string: imageURL)
+        //let url = URL(string: imageURL)
         print("tryto download")
-        cell.imageView?.image = UIImage(named: "spartan.jpg")
-        URLSession.shared.dataTask(with: url!, completionHandler: { (data, res, error) in
-            if(error != nil){
-                print("download image hit error");
-                return;
+        let url = URL(string: imageURL)
+        URLSession.shared.dataTask(with: url!, completionHandler: { (data, res, err) in
+            if(err != nil){
+                print("error with download image")
+                return
             }
             else{
-                print("try to set image")
-                //cell.imageView?.image = UIImage(named: "spartan.jpg")
-                //                DispatchQueue.main.async {
-                //                    cell.imageView?.image = UIImage(data: data!);
-                //                }
-                print("set image")
+                DispatchQueue.main.async {
+                    cell.imageView?.image = UIImage(data: data!);
+                }
             }
-        })
+        }).resume()
+        
+        
         return cell
     }
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.rowHeight = 100;
+    }
+    
     
     
     /*

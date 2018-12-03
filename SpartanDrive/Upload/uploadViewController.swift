@@ -61,7 +61,7 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     // Unique name for file uploaded.
-    let filenameJPG : String = "\(NSUUID().uuidString).jpg"
+    var filenameJPG : String = ""
     
     // Image Reference creates folder named "images" in Firebase Storage.
     var imageReference: StorageReference {
@@ -97,6 +97,7 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
         guard let image = selectedImage.image else { return  }
         guard let imageData = image.jpegData(compressionQuality: 1) else { return }
         guard let uid = Auth.auth().currentUser?.uid else { return }
+        filenameJPG = "\(NSUUID().uuidString).jpg"
         let uploadImageRef = imageReference.child(uid).child(filenameJPG)
         let uploadTask = uploadImageRef.putData(imageData, metadata: nil) { (metadata, error) in
             if(error != nil) {
@@ -171,16 +172,16 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     @IBAction func viewFilesButton(_ sender: Any) {
-        performSegue(withIdentifier: "viewFilesSegue", sender: nil)
-//        handleViewPhotos();
+//        performSegue(withIdentifier: "viewFilesSegue", sender: nil)
+        handleViewPhotos();
     }
     
-//    func handleViewPhotos() {
-//        let viewPhotosController = photoTableViewController()
-//        let navController = UINavigationController(rootViewController: viewPhotosController)
-//        present(navController, animated: true, completion: nil)
-//    }
-//
+    func handleViewPhotos() {
+        let viewPhotosController = photoTableViewController()
+        let navController = UINavigationController(rootViewController: viewPhotosController)
+        present(navController, animated: true, completion: nil)
+    }
+
     @IBOutlet var menuButtons: [UIButton]!
     @IBAction func handleSelection(_ sender: UIButton) {
         menuButtons.forEach{(button) in
