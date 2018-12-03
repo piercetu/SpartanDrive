@@ -112,7 +112,7 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
                     }
                     else{
                         if let imageURL = url?.absoluteString{
-                            addUrlToDatabase(uid: uid, url:imageURL,id:self.filenameJPG)
+                            addUrlToDatabase(uid: uid, url:imageURL)
                         }
                 }
             })
@@ -120,9 +120,9 @@ class uploadViewController: UIViewController, UINavigationControllerDelegate, UI
     }
 
         // Get DownloadURL
-        func addUrlToDatabase(uid:String,url:String,id:String) {
-            let UserRef = Database.database().reference().child("User").child(uid).child(id);
-            UserRef.setValue(url);
+        func addUrlToDatabase(uid:String,url:String) {
+            let UserRef = Database.database().reference().child("User").child(uid);
+            UserRef.childByAutoId().setValue(url);
         }
         
         // UILabel for Upload in Progress.

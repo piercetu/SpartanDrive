@@ -11,7 +11,6 @@ import Firebase
 
 class photoTableViewController: UITableViewController {
     var urllist: [String] = []
-    var idList:[String] = []
     let cellid = "cellid"
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +22,10 @@ class photoTableViewController: UITableViewController {
     func fetchPhotos(){
         guard let uid = Auth.auth().currentUser?.uid else { return }
         Database.database().reference().child("User").child(uid).observe(DataEventType.childAdded) { (snapshot) in
-            let id = snapshot.key as? String;
             let value = snapshot.value as? String;
             print("downloadurl: ")
             print(value!);
             self.urllist.append(value!)
-            self.idList.append(id!)
             DispatchQueue.main.async {
                 self.tableView.reloadData();
             }
@@ -49,9 +46,10 @@ class photoTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: cellid)
-        cell.textLabel?.text = idList[indexPath.row]
+        //let cell = tableView.dequeueReusableCell(withIdentifier: cellid, for: indexPath)
+        cell.textLabel?.text = urllist[indexPath.row]
         let imageURL = urllist[indexPath.row]
-        
+        //let url = URL(string: imageURL)
         print("tryto download")
         let url = URL(string: imageURL)
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, res, err) in
